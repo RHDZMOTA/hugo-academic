@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+branch_name=$(git branch --show-current)
+
 echo "Checkout to master branch."
 git checkout master
 
@@ -10,6 +12,6 @@ echo "Merge upstream/master with master."
 git merge upstream/master
 
 echo "Switch back to custom and merge master."
-git checkout custom
+git checkout $branch_name
 git merge master
 
