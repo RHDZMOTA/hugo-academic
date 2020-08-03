@@ -1,3 +1,4 @@
+{{ if site.Params.comments.engine | and (index site.Params.comments.commentable .Type) | and (ne .Params.commentable false) | or .Params.commentable }}
 <script src="https://utteranc.es/client.js"
         repo="rhdzmota/rhdzmota.github.io"
         issue-term="pathname"
@@ -6,4 +7,5 @@
         crossorigin="anonymous"
         async>
 </script>
+{{ end }}
 
